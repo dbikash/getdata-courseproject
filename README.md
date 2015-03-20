@@ -22,7 +22,9 @@ The result data set is uploaded separately through the Coursera Course Project p
 2. Unzip the source data set in this location. This should give a folder named "UCI HAR Dataset", containing "test" and "train" directories and other files.
 3. Open R console or R studio and set your working directory to this location using setwd()).
 4. Verify that package dplyr is installed.
-3. Run run_analysis.R.
+5. Run run_analysis.R.
+
+NOTE: I have run this R script in R Studio on a Windows 7 machine. If you are using a Linux or Mac, please modify the path names in run_analysis.R appropriately (e.g. front slashes instead of back slashes etc.).
 
 ## Output
 The output of the script is "tidy_data", a data frame converted to a grouped tbl_df for dplyr operations. After the script finishes, it opens up a view of the tidy data (you may also examine it in R).
