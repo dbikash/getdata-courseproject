@@ -19,4 +19,34 @@ The transformation required in the Course Project is done in run_analysis.R thro
    This gives 33 mean() columns and 33 std() columns.
 7. Create a new data frame containing the "Subject", "Activity", mean() and std() columns from the merged data frame.
 8. Group the above by Subject and Activity and summarize each of the other columns by their mean to give the final tidy data.
-   The final tidy data has 180 observations of 68 variables.
+
+The final tidy data has 180 observations of 68 variables.
+
+## Description of Data
+
+The following objects are in the R code or generated in the R environment after running the scripts.
+
+### Labels
+1. data_labels: Data frame containing the names of the data -- read from features.txt (561 observations of 2 variables).
+2. activity_labels: Data frame containing the names of the activities -- read from activity_labels.txt (6 observations of 2 variables)
+
+### Training Data
+3. train_activity: Data frame containing activity set for training data -- read from y_train.txt (7352 observations of 1 variable)
+4. train_subject: Data frame containing subject set for training data -- read from subject_train.txt (7352 observations of 1 variable)
+5. train_data: Data frame containing training data (read from x_train.txt), augmented by adding Subject and Activity columns (7352 observations of 563 variables).
+
+### Test Data
+6. test_activity: Data frame containing activity set for test data -- read from y_test.txt (2947 observations of 1 variable)
+7. test_subject: Data frame containing subject set for test data -- read from subject_test.txt (2947 observations of 1 variable)
+8. train_data: Data frame containing training data (read from x_test.txt), augmented by adding Subject and Activity columns (2947 observations of 563 variables).
+
+### Intermediate Data
+9. data: Data frame containing merged (training + test) data (10299 observations of 563 variables).
+10. mean_std_data: Data frame containing merged data about the mean and std variables, along with Subject and Activity (10299 observations of 68 variables).
+11. my_data: tbl_df version of mean_std_data.
+
+### Final Data
+12. tidy_data: Final tidy data containing the averages of the columns by Subject and Activity (180 observations of 68 variables).
+
+## Description of Variables
+
