@@ -1,6 +1,8 @@
 # CodeBook.md
 
-## Steps in transformation
+This document describes the steps in transforming the data, a description of the various intermediate data, and a description of the variables in the final data.
+
+## 1. Steps in transformation
 
 The transformation required in the Course Project is done in run_analysis.R through the following steps:
 
@@ -22,7 +24,7 @@ The transformation required in the Course Project is done in run_analysis.R thro
 
 The final tidy data has 180 observations of 68 variables.
 
-## Description of Data
+## 2. Description of Data
 
 The following objects are in the R code or generated in the R environment after running the scripts.
 
@@ -48,5 +50,9 @@ The following objects are in the R code or generated in the R environment after 
 ### Final Data
 12. tidy_data: Final tidy data containing the averages of the columns by Subject and Activity (180 observations of 68 variables).
 
-## Description of Variables
+## 3. Description of Variables
 
+The final tidy data variable names are the same as the original data set, although they are actually the averages of the corresponding fields based on Activity and Subject. I have intentionally kept the original names because (a) they are descriptive and meaningful enough, and (b) instead of renaming the variables to "Average of tBodyAcc-mean()-X", "Average of tBodyAcc-mean()-Y", it is better the take "Average of" common and mention in general. Therefore, the variable description is as follows:
+Column 1: Subject: 1..30 denoting one of the 30 persons who took part in that observation.
+Column 2: Activity: One of "WALKING", "WALKING_UPSTAIRS", "WALKING_DOWNSTAIRS", "SITTING", "STANDING" or "LAYING", denoting the activity being performed by the Subject in that observation.
+Columns 3 to 68: Average of the corresponding variables in the original data set, after being grouped by Subject and Activity. These 66 columns represent the mean and standard deviation measurements of various entities as recorded after the original experiment.
